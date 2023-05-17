@@ -45,6 +45,7 @@ function! s:ReverseString(input_string)
     for i in split(a:input_string, '\zs')
 	if i == '{'
             i = '}'
+	endif
 	let output = i . output
     endfor
     return output
