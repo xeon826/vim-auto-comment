@@ -43,7 +43,7 @@ let g:default_block_comment = get(g:, 'default_block_comment', '/*')
 function! s:ReverseString(input_string)
     let output = ''
     for i in split(a:input_string, '\zs')
-	output = s:strreplace(output, "{", "}")
+	output = substitute(output, "{", "}", "")
 	let output = i . output
     endfor
     return output
